@@ -5,7 +5,7 @@
 
 int main(){
     srand(time(NULL));
-    int s = rand();
+    int s = rand() % (100 - 0) + 0;
     int d;
     int tentative = 10;
     
@@ -33,6 +33,7 @@ int main(){
         else if (d == s)
         {
             printf("GG it was %d",s);
+            break;
         }
         tentative = tentative - 1;
     }  
