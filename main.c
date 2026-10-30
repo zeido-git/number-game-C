@@ -23,12 +23,12 @@ int main(){
         else if (d > s)
         {
             printf("(attemp left: %d )\n",tentative);
-            printf("%d > ???",d);
+            printf("%d > ???\n",d);
         }
         else if (d < s )
         {
             printf("(attemp left: %d )\n",tentative);
-            printf("%d < ???",d);
+            printf("%d < ???\n",d);
         }
         else if (d == s)
         {
