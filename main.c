@@ -17,15 +17,17 @@ int main(){
 
             while ( (c = getchar()) != '\n' && c != EOF )
             {
-                //sa va tt sup
+                //it will del
             }
         }
         else if (d > s)
         {
+            printf("(attemp left: %d )\n",tentative);
             printf("%d > ???",d);
         }
         else if (d < s )
         {
+            printf("(attemp left: %d )\n",tentative);
             printf("%d < ???",d);
         }
         else if (d == s)
