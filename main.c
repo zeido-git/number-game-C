@@ -9,6 +9,9 @@ int main(){
     int d;
     int tentative = 10;
     
+    printf("enter ur number: \n");
+    
+    
     while (tentative >= 0)
     {
         if (scanf("%d",&d) != 1)
@@ -19,6 +22,7 @@ int main(){
             {
                 //it will del
             }
+            printf("enter a valid number!!!!!!\n");
         }
         else if (d > s)
         {
@@ -40,7 +44,7 @@ int main(){
 
     if ( tentative < 0)
     {
-        printf("You have no more attempts left..");
+        printf("You have no more attempts left..\nthe number was: %d",s);
         printf("\n(game ended)");
     }
     return 0;
