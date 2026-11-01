@@ -8,15 +8,36 @@ int main(){
     srand(time(NULL));
     int min = 0;
     int max = 100;
-    int s = rand() % (100 - 0 + 1) + 0;
     int d;
-    int tentative = 10;
+    int tentative;
     char action[50];
     int ready = 0;
-    
+    int s_modified = 0;
+    int t_modified = 0;
+    int s;
+    int sett_t;
+
      printf("//////////NUMBER GAME//////////  \n");
 
     while (1){
+
+    
+
+        if (s_modified == 0) 
+        {
+            s = rand() % (100 - 0 + 1) + 0;
+        }
+        
+        if (t_modified == 0)
+        {
+            tentative = 10;
+        }
+
+        else if (t_modified != 0)
+        {
+            tentative = sett_t;
+        }
+        
 
         printf("\n\n1. change attempts number\n");
         printf("2. change number interval\n");
@@ -43,6 +64,13 @@ int main(){
         {
             printf("how much attemp you want ?\n");
             scanf("%d",&tentative);
+            while (tentative < 0)
+            {
+                printf("\nyou cant have a negative attempt number\n");
+                scanf("%d",&tentative);
+            } 
+            sett_t = tentative;
+            t_modified ++;
         }
 
         else if (strcmp(action,"2") == 0)
@@ -51,8 +79,14 @@ int main(){
             scanf("%d",&min);
             printf("maximum number : ");
             scanf("%d",&max);
+            while(max <= min)
+            {
+                printf("\nyou need to enter a bigger value than the minimum number\n");
+                scanf("%d",&max);
+            }
 
             s = rand() % (max - min + 1) + min;
+            s_modified ++;
 
         }
 
